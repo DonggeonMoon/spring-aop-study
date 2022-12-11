@@ -1,10 +1,11 @@
 package hello.advanced.trace.template;
 
+import org.junit.jupiter.api.Test;
+
 import hello.advanced.trace.template.code.AbstractTemplate;
 import hello.advanced.trace.template.code.SubClassLogic1;
 import hello.advanced.trace.template.code.SubClassLogic2;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.Test;
 
 
 @Slf4j
@@ -44,11 +45,11 @@ public class TemplateMethodTest {
         template1.execute();
 
         AbstractTemplate template2 = new SubClassLogic2();
-        template1.execute();
+        template2.execute();
     }
 
     @Test
-    void templatㄷMethodV2() {
+    void templateMethodV2() {
         AbstractTemplate template1 = new AbstractTemplate() {
             @Override
             protected void call() {
